@@ -8,22 +8,38 @@ div.classList.add('div-content')
 var target = document.querySelector('main')
 target.append(div)
 
-function menuClicked(event) {
-  console.log(document.location.pathname)
-  var tabSelected = (document.querySelector(
-    'body'
-  ).output = `<h1>You clicked: ${tabSelected} tab</h1>`)
+// function menuClicked(event) {
+//   console.log(document.location.pathname)
+//   var tabSelected = (document.querySelector(
+//     'body'
+//   ).output = `<h1>You clicked: ${tabSelected} tab</h1>`)
 
-  if (event.target.matches('.nav a')) {
-    div.innerHTML = output
-    //console.log(output)
-  } else {
-    return
+//   if (event.target.matches('.nav a')) {
+//     div.innerHTML = output
+//     //console.log(output)
+//   } else {
+//     return
+//   }
+//   event.preventDefault()
+// }
+
+// document.addEventListener('click', menuClicked)
+
+function clickHandler(event) {
+  let eventTargetHash = event.target.hash
+  if (eventTargetHash) {
+      eventTargetHash
+    console.log(eventTargetHash)
   }
-  event.preventDefault()
+
+  if (event.target.hash)
+    //   if (event.target.matches('.nav ul li a')) div.innerHTML = `${event.target}`
+    event.preventDefault()
 }
 
-document.addEventListener('click', menuClicked)
+
+document.addEventListener('click', clickHandler, false)
+
 
 // var tabSelected = window.location
 // setup template literal
