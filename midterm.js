@@ -1,3 +1,5 @@
+// TODO: Create querySlector
+
 // TODO: Add event listener to the page using event delegation
 
 // TODO: Use document.location capture and route action
