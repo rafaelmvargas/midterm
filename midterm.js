@@ -28,8 +28,15 @@ target.append(div)
 function clickHandler(event) {
   let eventTargetHash = event.target.hash
   if (eventTargetHash) {
-      eventTargetHash
     console.log(eventTargetHash)
+    div.innerHTML = eventTargetHash
+  }
+
+  //   signOut = document.querySelector('[sign-out-link')
+  console.log(event.target)
+
+  if (event.target.matches('.sign-out-link')) {
+    div.innerHTML = 'Singing out, please wait'
   }
 
   if (event.target.hash)
@@ -37,9 +44,7 @@ function clickHandler(event) {
     event.preventDefault()
 }
 
-
 document.addEventListener('click', clickHandler, false)
-
 
 // var tabSelected = window.location
 // setup template literal
