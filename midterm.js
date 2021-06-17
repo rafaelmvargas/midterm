@@ -1,13 +1,17 @@
+// Create DIV element on page
+
+var div = document.createElement('div')
+
+// Add class to newly created DIV
+div.classList.add('div-content')
+
 // TODO: Create querySlector
 var clicker = document.querySelector('body')
 
 // TODO: Add event listener to the page using event delegation
-clicker.addEventListener('click',whatMenuWasSelected)
+// clicker.addEventListener('click', whatMenuWasSelected)
 
 // TODO: fxn to filter clicks
-whatMenuWasSelected(event){
-    
-}
 
 // TODO: Remove active on all tabs
 
