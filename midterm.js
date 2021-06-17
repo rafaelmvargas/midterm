@@ -1,27 +1,31 @@
 // Create DIV element to place on page
-var div = document.createElement('div')
+var betaInfo = document.createElement('div')
 
 // Add class to newly created DIV
-div.classList.add('div-content')
+betaInfo.classList.add('beta-info')
 
 // Get a targert and place inside
 var target = document.querySelector('main')
-target.append(div)
+target.append(betaInfo)
 
 function clickHandler(event) {
-  let eventTargetHash = event.target.hash
-  if (eventTargetHash) {
-    console.log(eventTargetHash)
-    div.innerHTML = eventTargetHash
-  }
-
   console.log(event.target)
 
+  var eventTargetHash = event.target.hash
+  if (eventTargetHash) {
+    console.log(eventTargetHash)
+    betaInfo.innerHTML = eventTargetHash
+  }
+
   if (event.target.matches('.sign-out-link')) {
-    div.innerHTML = 'Singing out, please wait'
+    betaInfo.innerHTML = 'Singing out, please wait'
   }
 
   event.preventDefault()
+}
+
+function popOver(message) {
+  betaInfo.innerHTML = `${message}`
 }
 
 document.addEventListener('click', clickHandler, false)
