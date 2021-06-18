@@ -1,5 +1,5 @@
 // Create DIV element to place on page
-var popOver = document.createElement('div')
+var div = document.createElement('div')
 
 // Add class to newly created DIV
 div.classList.add('div-content')
@@ -13,7 +13,11 @@ function clickHandler(event) {
 
   var eventTargetHash = event.target.hash
   if (eventTargetHash) {
+    console.log(eventTargetHash)
+
     navRemoveActiveAll()
+    console.log(event.target)
+    navAddActive(event.target)
 
     console.log(eventTargetHash)
     div.innerHTML = eventTargetHash
@@ -27,8 +31,12 @@ function clickHandler(event) {
 }
 
 function navRemoveActiveAll() {
-  var tabs = document.querySelector('na ul li a')
-  tabs.classList.remove('.active')
+  var activeTab = document.querySelector('.active')
+  activeTab.classList.remove('active')
+}
+
+function navAddActive(tab) {
+  tab.classList.add('active')
 }
 
 function div(message) {
