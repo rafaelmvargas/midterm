@@ -16,10 +16,8 @@ function clickHandler(event) {
     console.log(eventTargetHash)
 
     navRemoveActiveAll()
-    console.log(event.target)
     navAddActive(event.target)
 
-    console.log(eventTargetHash)
     div.innerHTML = eventTargetHash
   }
 
