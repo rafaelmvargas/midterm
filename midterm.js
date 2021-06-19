@@ -35,8 +35,4 @@ function navAddActive(tab) {
   tab.classList.add('active')
 }
 
-function div(message) {
-  div.innerHTML = `${message}`
-}
-
 document.addEventListener('click', clickHandler, false)
