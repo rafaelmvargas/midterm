@@ -13,8 +13,6 @@ function clickHandler(event) {
 
   var eventTargetHash = event.target.hash
   if (eventTargetHash) {
-    console.log(eventTargetHash)
-
     navRemoveActiveAll()
     navAddActive(event.target)
 
