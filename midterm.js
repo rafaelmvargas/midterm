@@ -13,7 +13,7 @@ function clickHandler(event) {
 
   var eventTargetHash = event.target.hash
   if (eventTargetHash) {
-    navRemoveActiveAll()
+    navRemoveActive()
     navAddActive(event.target)
 
     div.innerHTML = eventTargetHash
@@ -26,7 +26,7 @@ function clickHandler(event) {
   event.preventDefault()
 }
 
-function navRemoveActiveAll() {
+function navRemoveActive() {
   var activeTab = document.querySelector('.active')
   activeTab.classList.remove('active')
 }
