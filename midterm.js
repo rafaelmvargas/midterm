@@ -9,8 +9,6 @@ var target = document.querySelector('main')
 target.append(div)
 
 function clickHandler(event) {
-  console.log(event.target)
-
   var eventTargetHash = event.target.hash
   if (eventTargetHash) {
     navRemoveActive()
