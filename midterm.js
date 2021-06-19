@@ -9,6 +9,7 @@ var target = document.querySelector('main')
 target.append(div)
 
 function clickHandler(event) {
+
   var eventTargetHash = event.target.hash
   if (eventTargetHash) {
     navRemoveActive()
@@ -17,7 +18,7 @@ function clickHandler(event) {
   }
 
   if (event.target.matches('.sign-out-link')) {
-    div.innerHTML = 'Singing out, please wait'
+    div.innerHTML = 'Signing out, please wait'
   }
 
   event.preventDefault()
