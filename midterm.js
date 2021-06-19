@@ -13,7 +13,6 @@ function clickHandler(event) {
   if (eventTargetHash) {
     navRemoveActive()
     navAddActive(event.target)
-
     div.innerHTML = eventTargetHash
   }
 
